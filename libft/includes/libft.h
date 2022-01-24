@@ -6,7 +6,7 @@
 /*   By: rantario <rantario@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 16:05:11 by rantario          #+#    #+#             */
-/*   Updated: 2022/01/24 13:01:40 by rantario         ###   ########.fr       */
+/*   Updated: 2022/01/24 17:01:49 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,8 @@ float	ft_invsqrt(float x);
 int		ft_nbrlen(long num);
 int		ft_power(int num, unsigned int power);
 float	ft_invsqrt(float number);
+float	to_degrees(float radians);
+float	to_radians(float degrees);
 
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);

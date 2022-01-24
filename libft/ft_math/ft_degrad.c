@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_power.c                                         :+:      :+:    :+:   */
+/*   ft_degrad.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rantario <rantario@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/30 18:12:41 by rantario          #+#    #+#             */
-/*   Updated: 2022/01/24 17:01:19 by rantario         ###   ########.fr       */
+/*   Created: 2022/01/24 13:09:55 by rantario          #+#    #+#             */
+/*   Updated: 2022/01/24 17:01:55 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_power(int num, unsigned int power)
-{
-	int	res;
+#ifndef M_PI 
+# define M_PI 3.14159265358979323846264338327950288
+#endif
 
-	res = 1;
-	while (num)
-	{
-		if (num & 1)
-			res *= power;
-		power *= power;
-		num >>= 1;
-	}
-	return (res);
+float	to_degrees(float radians)
+{
+	return (radians * (180.0 / M_PI));
+}
+
+float	to_radians(float degrees)
+{
+	return (degrees * (M_PI / 180.0));
 }
