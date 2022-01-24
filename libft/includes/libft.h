@@ -6,7 +6,7 @@
 /*   By: rantario <rantario@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 16:05:11 by rantario          #+#    #+#             */
-/*   Updated: 2022/01/13 19:15:47 by rantario         ###   ########.fr       */
+/*   Updated: 2022/01/24 13:01:40 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ int		ft_hexlen(long num);
 float	ft_invsqrt(float x);
 int		ft_nbrlen(long num);
 int		ft_power(int num, unsigned int power);
+float	ft_invsqrt(float number);
 
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);

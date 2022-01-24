@@ -8,7 +8,7 @@ HEADER_LIB	:=	$(addsuffix .h, $(addprefix includes/, libft get_next_line ft_prin
 
 FT_IS		:=	alnum alpha ascii count digit in print space spacenl where minmax
 FT_LST 		:=	add_back add_front clear delone iter last map new size
-FT_MATH		:=	abs nbrlen hexlen baselen power
+FT_MATH		:=	abs nbrlen hexlen baselen power invsqrt
 FT_MEM 		:=	bzero calloc memccpy memchr memcmp memcpy memfree memmove memset intswap
 FT_PUT 		:=	char endl nbr str char_fd endl_fd nbr_fd str_fd
 FT_STR 		:=	chr cmp dup join lcat lcpy cpy len mapi ncmp nstr rchr trim iteri
