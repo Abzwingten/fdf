@@ -1,0 +1,31 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/matt/Documents/GIT/ECOLE42/fdf'
+ 
+make -C ./libft
+ 
+make[1]: Entering directory '/home/matt/Documents/GIT/ECOLE42/fdf/libft'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/matt/Documents/GIT/ECOLE42/fdf/libft'
+ 
+make -C ./minilibx
+ 
+make[1]: Entering directory '/home/matt/Documents/GIT/ECOLE42/fdf/minilibx'
+./configure
+make[1]: Leaving directory '/home/matt/Documents/GIT/ECOLE42/fdf/minilibx'
+ 
+mkdir -p ./objs
+make fdf
+ 
+make[1]: Entering directory '/home/matt/Documents/GIT/ECOLE42/fdf'
+ 
+cc  -Wall -Wextra -Werror -O3 -funroll-loops  -I./includes -I./libft/includes -I./libft -I./minilibx  -c -o objs/ft_fdf.o srcs/ft_fdf.c
+ 
+cc  -Wall -Wextra -Werror -O3 -funroll-loops  -I./includes -I./libft/includes -I./libft -I./minilibx  -c -o objs/ft_fdf_map.o srcs/ft_fdf_map.c
+cc  -Wall -Wextra -Werror -O3 -funroll-loops  -I./includes -I./libft/includes -I./libft -I./minilibx  -c -o objs/ft_put_pixel.o srcs/ft_put_pixel.c
+cc  -Wall -Wextra -Werror -O3 -funroll-loops  -I./includes -I./libft/includes -I./libft -I./minilibx  -c -o objs/main.o srcs/main.c
+ 
+cc -o fdf ./objs/ft_fdf.o ./objs/ft_fdf_map.o ./objs/ft_put_pixel.o ./objs/main.o -lX11 -lXext -lm -L./libft -lft -L./minilibx -lmlx
+make[1]: Leaving directory '/home/matt/Documents/GIT/ECOLE42/fdf'
+ 
+make: Leaving directory '/home/matt/Documents/GIT/ECOLE42/fdf'
+ 
