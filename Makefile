@@ -9,10 +9,7 @@ OBJS_DIR = ./objs
 LIB = libft.a
 LIB_DIR = ./libft
 
-SRC_FILES =	ft_fdf.c 			\
-			ft_fdf_map.c		\
-			ft_put_pixel.c		\
-			main.c
+SRC_FILES =	
 
 SRCS = $(addprefix $(SRCS_DIR)/, $(SRC_FILES))
 OBJS = $(patsubst $(SRCS_DIR)/%.c,$(OBJS_DIR)/%.o, $(SRCS))
@@ -52,6 +49,7 @@ CFLAGS_FINAL =	$(CFLAGS_INTERNAL) \
 
 LDFLAGS +=	-L$(LIB_DIR) -lft -L$(MLX_DIR) -lmlx
 
+# COLORS
 DEFAULT = "\033[0;0m"
 RED = "\033[0;31m"
 GREEN = "\033[0;32m"
@@ -61,16 +59,21 @@ CYAN = "\033[0;36m"
 .PHONY: all clean clean_libs clean_self fclean fclean_libs fclean_self debug re
 
 all:
-	$(MAKE) -C $(LIB_DIR)
-	$(MAKE) -C $(MLX_DIR)
-	mkdir -p $(OBJS_DIR)
-	$(MAKE) $(NAME)
+	@echo -c $(CYAN) "Making libft" $(DEFAULT)
+	@$(MAKE) -s -C $(LIB_DIR)
+	@echo -c $(CYAN) "Making minilibx" $(DEFAULT)
+	@$(MAKE) -s -C $(MLX_DIR)
+	@cp $(MLX_DIR)/$(MLX) $(MLX)
+	@mkdir -p $(OBJS_DIR)
+	@echo $(CYAN) "Making fdf" $(DEFAULT)
+	@$(MAKE) -s $(NAME)
+	@echo $(RED) "FDF DONE" $(DEFAULT)
 
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c | $(OBJS_DIR)
-	$(CC) $(CFLAGS_FINAL) -c -o $@ $<
+	@$(CC) $(CFLAGS_FINAL) -c -o $@ $<
 
 $(NAME): $(OBJS) $(LIB_DIR)/$(LIB) $(MLX_DIR)/$(MLX)
-	$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
+	@$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
 
 
 clean: clean_libs clean_self
@@ -78,18 +81,18 @@ clean: clean_libs clean_self
 clean_libs:
 	@echo $(CYAN) "Cleaning libft" $(DEFAULT)
 	@echo -n $(BLUE)
-	$(MAKE) -C $(LIB_DIR) clean
+	@$(MAKE) -s -C $(LIB_DIR) clean
 	@echo -n $(DEFAULT)
 
 	@echo $(CYAN) "Cleaning minilibx" $(DEFAULT)
 	@echo -n $(BLUE)
-	$(MAKE) -C $(MLX_DIR) clean
+	@$(MAKE) -s -C $(MLX_DIR) clean
 	@echo -n $(DEFAULT)
 
 clean_self:
 	@echo $(CYAN) "Cleaning fdf" $(DEFAULT)
 	@echo -n $(GREEN)
-	if [ -d "$(OBJS_DIR)" ]; then rm -rfv $(OBJS_DIR); fi
+	@if [ -d "$(OBJS_DIR)" ]; then rm -rfv $(OBJS_DIR); fi
 	@echo -n $(DEFAULT)
 
 fclean: fclean_libs fclean_self
@@ -97,12 +100,12 @@ fclean: fclean_libs fclean_self
 fclean_libs: clean_libs
 	@echo $(CYAN) "Purging libft" $(DEFAULT)
 	@echo -n $(BLUE)
-	$(MAKE) -C $(LIB_DIR) fclean
+	$(MAKE) -s -C $(LIB_DIR) fclean
 	@echo -n $(DEFAULT)
 
 	@echo $(CYAN) "Purging minilibx" $(DEFAULT)
 	@echo -n $(BLUE)
-	$(MAKE) -C $(MLX_DIR) clean
+	$(MAKE) -s -C $(MLX_DIR) clean
 	rm -rfv $(MLX)
 	@echo -n $(DEFAULT)
 
