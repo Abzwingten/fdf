@@ -37,9 +37,9 @@ endif
 
 
 CFLAGS_ERRORS = -Wall -Wextra -Werror
-CFLAGS_OPTIMIZATIONS = -O3 -funroll-loops
+CFLAGS_OPTIMIZATIONS = -O2 -funroll-loops
 CFLAGS_INCLUDES = -I$(INCLUDES_DIR) -I$(LIBFT_INC_DIR) -I$(LIB_DIR) -I$(MLX_DIR)
-CFLAGS_DEBUG = -O0 -pg -g -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer
+CFLAGS_DEBUG = -O0 -pg -g
 
 
 CFLAGS_FINAL =	$(CFLAGS_INTERNAL) \
