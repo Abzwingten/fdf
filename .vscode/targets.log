@@ -5,9 +5,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Wed Jan 26 21:50:37 2022
+# Make data base, printed on Thu Jan 27 21:58:30 2022
 
 # Variables
 
@@ -20,12 +19,12 @@ NO_AT_BRIDGE = 1
 # environment
 GTK_RC_FILES = /etc/gtk/gtkrc:/home/matt/.gtkrc:/home/matt/.config/gtkrc
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-a266d476-ace6-44ec-a4b4-53074873793c.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-278b73db-7526-41c0-8d04-1f33bb891c2e.sock
 # environment
 VSCODE_CWD = /home/matt
 # default
 MAKE_COMMAND := make
-# makefile (from 'Makefile', line 48)
+# makefile (from 'Makefile', line 45)
 CFLAGS_FINAL = $(CFLAGS_INTERNAL) $(CFLAGS_ERRORS) $(CFLAGS_OPTIMIZATIONS) $(CFLAGS_DEPENDENCIES) $(CFLAGS_INCLUDES) $(CFLAGS)
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
@@ -35,7 +34,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 .VARIABLES := 
 # environment
 PWD = /home/matt/Documents/GIT/ECOLE42/fdf
-# makefile (from 'Makefile', line 56)
+# makefile (from 'Makefile', line 53)
 DEFAULT = "\033[0;0m"
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
@@ -56,14 +55,15 @@ LANG = C
 # environment
 XAUTHORITY = /home/matt/.Xauthority
 # default
+ 
 .LOADED := 
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
-# makefile (from 'Makefile', line 60)
+# makefile (from 'Makefile', line 57)
 CYAN = "\033[0;36m"
 # makefile
 MAKEFLAGS = pqrR
-# makefile (from 'Makefile', line 59)
+# makefile (from 'Makefile', line 56)
 BLUE = "\033[0;34m"
 # makefile
 CURDIR := /home/matt/Documents/GIT/ECOLE42/fdf
@@ -71,16 +71,16 @@ CURDIR := /home/matt/Documents/GIT/ECOLE42/fdf
 VSCODE_PIPE_LOGGING = true
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
-# makefile (from 'Makefile', line 17)
+# makefile (from 'Makefile', line 14)
 SRCS = $(addprefix $(SRCS_DIR)/, $(SRC_FILES))
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
-# makefile (from 'Makefile', line 44)
+# makefile (from 'Makefile', line 41)
 CFLAGS_INCLUDES = -I$(INCLUDES_DIR) -I$(LIBFT_INC_DIR) -I$(LIB_DIR) -I$(MLX_DIR)
 # environment
 MFLAGS = -pqrR
-# makefile (from 'Makefile', line 43)
-CFLAGS_OPTIMIZATIONS = -O3 -funroll-loops
+# makefile (from 'Makefile', line 40)
+CFLAGS_OPTIMIZATIONS = -O2 -funroll-loops
 # default
 .SHELLFLAGS := -c
 # environment
@@ -102,13 +102,13 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 202227
+VSCODE_PID = 128824
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/mattarch:@/tmp/.ICE-unix/984,unix/mattarch:/tmp/.ICE-unix/984
+SESSION_MANAGER = local/mattarch:@/tmp/.ICE-unix/822,unix/mattarch:/tmp/.ICE-unix/822
 # automatic
 *F = $(notdir $*)
 # environment
@@ -125,7 +125,7 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 BREAKPAD_DUMP_LOCATION = /home/matt/.config/Code - OSS/exthost Crash Reports
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
-# makefile (from 'Makefile', line 18)
+# makefile (from 'Makefile', line 15)
 OBJS = $(patsubst $(SRCS_DIR)/%.c,$(OBJS_DIR)/%.o, $(SRCS))
 # makefile (from 'Makefile', line 1)
 SHELL = /bin/zsh
@@ -137,7 +137,7 @@ PLATFORMIO_CALLER = vscode
 SHLVL = 0
 # environment
 MAKELEVEL := 0
-# makefile (from 'Makefile', line 23)
+# makefile (from 'Makefile', line 20)
 MLX_DIR = ./minilibx
 # default
 MAKE = $(MAKE_COMMAND)
@@ -153,11 +153,11 @@ MOTD_SHOWN = pam
 INCLUDES_DIR = ./includes
 # environment
 VSCODE_LOG_NATIVE = false
-# makefile (from 'Makefile', line 45)
-CFLAGS_DEBUG = -O0 -pg -g -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer
-# makefile (from 'Makefile', line 58)
+# makefile (from 'Makefile', line 42)
+CFLAGS_DEBUG = -O0 -pg -g
+# makefile (from 'Makefile', line 55)
 GREEN = "\033[0;32m"
-# makefile (from 'Makefile', line 22)
+# makefile (from 'Makefile', line 19)
 MLX = libmlx.a
 # automatic
 ?F = $(notdir $?)
@@ -171,9 +171,9 @@ XDG_SEAT = seat0
 NO_PROXY = 127.0.0.1
 # environment
 XDG_CURRENT_DESKTOP = KDE
-# makefile (from 'Makefile', line 20)
+# makefile (from 'Makefile', line 17)
 UNAME_S := Linux
-# makefile (from 'Makefile', line 42)
+# makefile (from 'Makefile', line 39)
 CFLAGS_ERRORS = -Wall -Wextra -Werror
 # automatic
 +F = $(notdir $+)
@@ -194,8 +194,8 @@ XDG_VTNR = 7
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 902
-# makefile (from 'Makefile', line 57)
+SYSTEMD_EXEC_PID = 749
+# makefile (from 'Makefile', line 54)
 RED = "\033[0;31m"
 # environment
 DISPLAY = :0
@@ -208,10 +208,10 @@ MAKE_VERSION := 4.3
 # environment
 KDE_SESSION_UID = 1000
 # makefile (from 'Makefile', line 12)
-SRC_FILES = ft_fdf.c ft_fdf_map.c ft_put_pixel.c main.c
+SRC_FILES = 
 # 'override' directive
 .SHELLSTATUS := 0
-# makefile (from 'Makefile', line 53)
+# makefile (from 'Makefile', line 50)
 LDFLAGS = -lX11 -lXext -lm -L$(LIB_DIR) -lft -L$(MLX_DIR) -lmlx
 # makefile (from 'Makefile', line 7)
 OBJS_DIR = ./objs
@@ -280,7 +280,7 @@ GDMSESSION = plasma
 # Implicit Rules
 
 objs/%.o: srcs/%.c | objs
-#  recipe to execute (from 'Makefile', line 76):
+#  recipe to execute (from 'Makefile', line 73):
 	@$(CC) $(CFLAGS_FINAL) -c -o $@ $<
 
 # 1 implicit rules, 0 (0.0%) terminal.
@@ -291,7 +291,7 @@ fclean_self: clean_self
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 116):
+#  recipe to execute (from 'Makefile', line 113):
 	@echo $(CYAN) "Purging fdf" $(DEFAULT)
 	@echo -n $(GREEN)
 	if [ -f "$(NAME)" ]; then rm -rfv $(NAME); fi
@@ -302,13 +302,13 @@ debug: clean_self
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 123):
+#  recipe to execute (from 'Makefile', line 120):
 	CFLAGS="$(CFLAGS_DEBUG)" $(MAKE) all
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-01-26 21:47:46.9387974
+#  Last modified 2022-01-27 21:58:24.6674465
 #  File has been updated.
 #  Successfully updated.
 
@@ -318,17 +318,10 @@ libft/libft.a:
 #  Modification time never checked.
 #  File has not been updated.
 
- 
 clean: clean_libs clean_self
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
-#  File has not been updated.
-
-# Not a target:
-objs/ft_fdf.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
 #  File has not been updated.
 
 re: fclean all
@@ -342,23 +335,17 @@ clean_self:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 96):
+#  recipe to execute (from 'Makefile', line 93):
 	@echo $(CYAN) "Cleaning fdf" $(DEFAULT)
 	@echo -n $(GREEN)
 	@if [ -d "$(OBJS_DIR)" ]; then rm -rfv $(OBJS_DIR); fi
 	@echo -n $(DEFAULT)
 
-# Not a target:
-objs/main.o:
+fdf: libft/libft.a minilibx/libmlx.a
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-
-fdf: objs/ft_fdf.o objs/ft_fdf_map.o objs/ft_put_pixel.o objs/main.o libft/libft.a minilibx/libmlx.a
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 79):
+#  recipe to execute (from 'Makefile', line 76):
 	@$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
 
 # Not a target:
@@ -374,6 +361,7 @@ all:
 #  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
+ 
 #  Needs to be updated (-q is set).
 # automatic
 # @ := all
@@ -393,7 +381,7 @@ all:
 # | := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=7/32=22%
-#  recipe to execute (from 'Makefile', line 65):
+#  recipe to execute (from 'Makefile', line 62):
 	@echo -c $(CYAN) "Making libft" $(DEFAULT)
 	@$(MAKE) -s -C $(LIB_DIR)
 	@echo -c $(CYAN) "Making minilibx" $(DEFAULT)
@@ -410,18 +398,12 @@ fclean: fclean_libs fclean_self
 #  File does not exist.
 #  File has not been updated.
 
-# Not a target:
-objs/ft_put_pixel.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
 clean_libs:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 85):
+#  recipe to execute (from 'Makefile', line 82):
 	@echo $(CYAN) "Cleaning libft" $(DEFAULT)
 	@echo -n $(BLUE)
 	@$(MAKE) -s -C $(LIB_DIR) clean
@@ -431,18 +413,12 @@ clean_libs:
 	@$(MAKE) -s -C $(MLX_DIR) clean
 	@echo -n $(DEFAULT)
 
-# Not a target:
-objs/ft_fdf_map.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
 fclean_libs: clean_libs
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 104):
+#  recipe to execute (from 'Makefile', line 101):
 	@echo $(CYAN) "Purging libft" $(DEFAULT)
 	@echo -n $(BLUE)
 	$(MAKE) -s -C $(LIB_DIR) fclean
@@ -471,19 +447,19 @@ minilibx/libmlx.a:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=20/1024=2%, Rehash=0, Collisions=0/64=0%
+# Load=16/1024=2%, Rehash=0, Collisions=0/56=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 37 / storage = 350 B / avg = 9 B
-# current buf: size = 8162 B / used = 350 B / count = 37 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 33 / storage = 286 B / avg = 8 B
+# current buf: size = 8162 B / used = 286 B / count = 33 / avg = 8 B
 
-# strcache performance: lookups = 75 / hit rate = 50%
+# strcache performance: lookups = 71 / hit rate = 53%
 # hash-table stats:
-# Load=37/8192=0%, Rehash=0, Collisions=0/75=0%
-# Finished Make data base on Wed Jan 26 21:50:37 2022
+# Load=33/8192=0%, Rehash=0, Collisions=0/71=0%
+# Finished Make data base on Thu Jan 27 21:58:30 2022
 
  

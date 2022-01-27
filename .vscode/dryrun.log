@@ -21,6 +21,5 @@ make[1]: Entering directory '/home/matt/Documents/GIT/ECOLE42/fdf'
 make[1]: Leaving directory '/home/matt/Documents/GIT/ECOLE42/fdf'
  
 echo "\033[0;31m" "FDF DONE" "\033[0;0m"
- 
 make: Leaving directory '/home/matt/Documents/GIT/ECOLE42/fdf'
  
