@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jan 27 21:58:30 2022
+# Make data base, printed on Thu Jan 27 22:12:55 2022
 
 # Variables
 
@@ -36,6 +36,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 PWD = /home/matt/Documents/GIT/ECOLE42/fdf
 # makefile (from 'Makefile', line 53)
 DEFAULT = "\033[0;0m"
+ 
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -55,7 +56,6 @@ LANG = C
 # environment
 XAUTHORITY = /home/matt/.Xauthority
 # default
- 
 .LOADED := 
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
@@ -272,10 +272,10 @@ GDMSESSION = plasma
 
 # Directories
 
-# . (device 2081, inode 14145): 15 files, no impossibilities.
+# . (device 2081, inode 14145): 12 files, no impossibilities.
 # srcs (device 2081, inode 13487): No files, no impossibilities so far.
 
-# 15 files, no impossibilities in 2 directories.
+# 12 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -354,6 +354,7 @@ fdf: libft/libft.a minilibx/libmlx.a
 #  Modification time never checked.
 #  File has not been updated.
 
+ 
 all:
 #  Phony target (prerequisite of .PHONY).
 #  Command line target.
@@ -361,7 +362,6 @@ all:
 #  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
- 
 #  Needs to be updated (-q is set).
 # automatic
 # @ := all
@@ -454,12 +454,12 @@ minilibx/libmlx.a:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 33 / storage = 286 B / avg = 8 B
-# current buf: size = 8162 B / used = 286 B / count = 33 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 32 / storage = 277 B / avg = 8 B
+# current buf: size = 8162 B / used = 277 B / count = 32 / avg = 8 B
 
-# strcache performance: lookups = 71 / hit rate = 53%
+# strcache performance: lookups = 68 / hit rate = 52%
 # hash-table stats:
-# Load=33/8192=0%, Rehash=0, Collisions=0/71=0%
-# Finished Make data base on Thu Jan 27 21:58:30 2022
+# Load=32/8192=0%, Rehash=0, Collisions=0/68=0%
+# Finished Make data base on Thu Jan 27 22:12:55 2022
 
  
