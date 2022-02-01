@@ -19,7 +19,7 @@ OBJS = $(patsubst $(SRCS_DIR)/%.c,$(OBJS_DIR)/%.o, $(SRCS))
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Linux)
 	MLX = libmlx.a
-	MLX_DIR = ./minilibx
+	MLX_DIR = ./minilibx-linux
 	LDFLAGS += -lX11 -lXext -lm
 endif
 ifeq ($(UNAME_S),Darwin)
