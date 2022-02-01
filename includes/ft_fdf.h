@@ -1,136 +1,90 @@
 #ifndef FT_FDF_H
 # define FT_FDF_H
 
-
-# include "mlx.h"
-# include "libft.h"
-# include <math.h>
+#define WIDTH 1024
+#define HEIGHT 600
+#define PI 3.14159
 # include <stdlib.h>
-# include <unistd.h>
-# include <stddef.h>
-# include <fcntl.h>
-# include <stdarg.h>
-# include <errno.h>
-# include <string.h>
+#include <math.h>
+#include <mlx.h>
+#include "libft.h"
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
-# ifndef BUFFER_SIZE
-# define BUFFER_SIZE 2000
-# endif
-# define ERROR_MSG "Usage :./fdf <filename> [ case_size z_size ]\n"
-# define INVALID_LEN "Found wrong line length. Exiting.\n"
-
-typedef struct s_indexes
+typedef struct s_point
 {
-	int	x;
-	int	y;
-	int	zoom;
-	int	zoom_height;
-}	t_indexes;
+	float x;
+	float y;
+	float z;
+} t_point;
 
-typedef struct s_map_element
+typedef struct s_line
 {
-	int				x;
-	int				y;
-	int				z;
-	unsigned int	color;
-}	t_map_element;
+	int error1;
+	int error2;
+	int sign_x;
+	int sign_y;
+	int dx;
+	int dy;
+	int color;
+} t_line;
 
-typedef struct s_data {
-	void	*mlx;
-	void	*mlx_win;
-	void	*img;
-	char	*addr;
-	int		bits_per_pixel;
-	int		line_length;
-	int		endian;
-	int		start_x;
-	int		start_y;
-}				t_data;
-
-typedef struct s_bresenham
+typedef struct s_env
 {
-	int	dx;
-	int	sx;
-	int	dy;
-	int	sy;
-	int	err;
-	int	e2;
-}	t_bresenham;
+	void *mlx;
+	void *window;
+	void *image;
+	int **matrix;
+	int row;
+	int col;
+	int scale;
+	int scale_z;
+	int x_offset;
+	int y_offset;
+	int projection;
+	int color;
+	t_point p1;
+	t_point p2;
+	t_point **init;
+	t_point **pts;
+	t_point **trans;
+	t_line line;
+} t_env;
 
-typedef struct s_position
-{
-	int	x0;
-	int	x1;
-	int	y0;
-	int	y1;
-}	t_positions;
+void ft_error(int argc, int fd);
+void set_basic(t_env *emu);
+void event_1(int key_code, t_env *emu);
+void event_2(int key_code, t_env *emu);
+void draw_picture_1(t_env *emu);
+void draw_picture_2(t_env *emu);
+void create_window(t_env *emu);
+void draw_line(t_env *emu);
+void set_default(t_env *emu);
+void set_color_1(t_env *emu, int i, int j);
+void set_color_2(t_env *emu, int i, int j);
+void put_pixel_img(t_env *emu, int x, int y, int color);
+void img_clear(t_env *emu);
+void translate(t_env *emu);
+void choose_color_1(t_env *emu, int i, int j);
+void choose_color_2(t_env *emu, int i, int j);
+void x_rotation(t_env *emu, float angle);
+void y_rotation(t_env *emu, float angle);
+void z_rotation(t_env *emu, float angle);
+void calc_x_rot(float *y, float *z, float angle);
+void calc_y_rot(float *x, float *z, float angle);
+void calc_z_rot(float *x, float *y, float angle);
+void make_points(t_env *emu);
+int main_activity(t_env *emu);
+int key_handling(int key_code, t_env *emu);
+int **make_matrix(char **map, t_env *emu);
+int round_number(float number);
+int get_red(int color);
+int get_green(int color);
+int get_blue(int color);
+void ft_draw_controls(t_env *emu);
+t_point trans_point_iso(t_point p, t_env *emu);
+t_point trans_point_cab(t_point p, t_env *emu);
+t_point trans_point_plan(t_point p, t_env *emu);
 
-typedef struct s_graphics_arg
-{
-	int	points_number;
-	int	elements_nb;
-	int	lines_nb;
-	int	max_z;
-	int	pn;
-}	t_graphics;
-
-typedef struct s_numbers
-{
-	int	elements_nb;
-	int	lines_nb;
-}	t_numbers;
-
-typedef struct s_fdf_utils
-{
-	int		line_iter;
-	char	*line;
-	char	*comma_pos;
-	char	**elements;
-	int		elements_nb;
-	int		fd;
-
-}	t_fdf_utils;
-typedef struct s_structures
-{
-	t_map_element	*point;
-	t_graphics		*graphical;
-	t_data			*img;
-	t_indexes		*size;
-}	t_structures;
-
-/* fdf functions */
-void	free_elements(char **str);
-void	fdf(int fd, t_numbers count, int argc, char *argv[]);
-
-/* graphics part */
-void	graphics_engine(t_map_element *point, t_graphics graphical, int argc,
-			char *argv[]);
-void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
-void	ft_draw_horizontal(t_graphics *graphical,
-			t_map_element *point, t_data *img, t_indexes *size);
-void	ft_draw_vertical(t_graphics *graphical,
-			t_map_element *point, t_data *img, t_indexes *size);
-void	ft_draw_horizontal_2d(t_graphics *graphical,
-			t_map_element *point, t_data *img, t_indexes *size);
-void	ft_draw_vertical_2d(t_graphics *graphical,
-			t_map_element *point, t_data *img, t_indexes *size);
-void	iso(int *x, int *y, int z);
-void	bresenham(t_data *img, t_positions pos, int color, t_indexes *size);
-void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
-void	iso_2d(int *x, int *y);
-void	ft_put_string_to_win(t_data *img);
-int		ft_buttons(int keycode, t_structures *ss);
-void	ft_draw_vertical_rot(t_graphics *graphical,
-			t_map_element *point, t_data *img, t_indexes *size);
-void	ft_draw_horizontal_rot(t_graphics *graphical,
-			t_map_element *point, t_data *img, t_indexes *size);
-void	ft_draw_vertical_r(t_graphics *graphical,
-			t_map_element *point, t_data *img, t_indexes *size);
-void	ft_draw_horizontal_r(t_graphics *graphical,
-			t_map_element *point, t_data *img, t_indexes *size);
-void	ft_draw_vertical_l(t_graphics *graphical,
-			t_map_element *point, t_data *img, t_indexes *size);
-void	ft_draw_horizontal_l(t_graphics *graphical,
-			t_map_element *point, t_data *img, t_indexes *size);
-void	ft_put_string_to_win_2(t_data *img);
 #endif

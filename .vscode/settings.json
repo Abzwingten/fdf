@@ -1,6 +1,10 @@
 {
 	"files.associations": {
 		"stdint.h": "c",
-		"libft.h": "c"
+		"libft.h": "c",
+		"ft_fdf.h": "c",
+		"limits": "c",
+		"*.tcc": "c",
+		"types.h": "c"
 	}
 }

@@ -9,7 +9,9 @@ OBJS_DIR = ./objs
 LIB = libft.a
 LIB_DIR = ./libft
 
-SRC_FILES =	
+SRC_FILES =	calculus.c  drawing.c  fdf.c         rotation.c \
+color.c     events.c   projection.c
+
 
 SRCS = $(addprefix $(SRCS_DIR)/, $(SRC_FILES))
 OBJS = $(patsubst $(SRCS_DIR)/%.c,$(OBJS_DIR)/%.o, $(SRCS))
