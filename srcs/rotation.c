@@ -1,6 +1,6 @@
 #include "ft_fdf.h"
 
-void x_rotation(t_env *emu, float angle)
+void x_rotation(t_environment *emu, float angle)
 {
 	int i;
 	int j;
@@ -18,7 +18,7 @@ void x_rotation(t_env *emu, float angle)
 	}
 }
 
-void y_rotation(t_env *emu, float angle)
+void y_rotation(t_environment *emu, float angle)
 {
 	int i;
 	int j;
@@ -36,7 +36,7 @@ void y_rotation(t_env *emu, float angle)
 	}
 }
 
-void z_rotation(t_env *emu, float angle)
+void z_rotation(t_environment *emu, float angle)
 {
 	int i;
 	int j;

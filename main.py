@@ -12,9 +12,9 @@ if (len(sys.argv) > 1):
 	#	print int(data[i])
 
 	width = int(data[18])
-	print width
+	print (width)
 	end = len(data)
-	print end
+	print (end)
 	res = []
 	start = end % (width * 3)
 	while start < end:

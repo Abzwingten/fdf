@@ -1,6 +1,6 @@
 #include "ft_fdf.h"
 
-void set_color_1(t_env *emu, int i, int j)
+void set_color_1(t_environment *emu, int i, int j)
 {
 	if ((emu->init[i][j].z < emu->init[i][j + 1].z) || (emu->init[i][j].z > emu->init[i][j + 1].z))
 	{
@@ -15,7 +15,7 @@ void set_color_1(t_env *emu, int i, int j)
 	}
 }
 
-void set_color_2(t_env *emu, int i, int j)
+void set_color_2(t_environment *emu, int i, int j)
 {
 	if ((emu->init[i][j].z < emu->init[i + 1][j].z) || (emu->init[i][j].z > emu->init[i + 1][j].z))
 	{

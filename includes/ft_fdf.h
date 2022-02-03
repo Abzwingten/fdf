@@ -3,7 +3,7 @@
 
 #define WIDTH 1024
 #define HEIGHT 600
-#define PI 3.14159
+
 # include <stdlib.h>
 #include <math.h>
 #include <mlx.h>
@@ -30,7 +30,7 @@ typedef struct s_line
 	int color;
 } t_line;
 
-typedef struct s_env
+typedef struct s_environment
 {
 	void *mlx;
 	void *window;
@@ -44,47 +44,47 @@ typedef struct s_env
 	int y_offset;
 	int projection;
 	int color;
-	t_point p1;
-	t_point p2;
+	t_point point_1;
+	t_point point2;
 	t_point **init;
 	t_point **pts;
 	t_point **trans;
 	t_line line;
-} t_env;
+} t_environment;
 
 void ft_error(int argc, int fd);
-void set_basic(t_env *emu);
-void event_1(int key_code, t_env *emu);
-void event_2(int key_code, t_env *emu);
-void draw_picture_1(t_env *emu);
-void draw_picture_2(t_env *emu);
-void create_window(t_env *emu);
-void draw_line(t_env *emu);
-void set_default(t_env *emu);
-void set_color_1(t_env *emu, int i, int j);
-void set_color_2(t_env *emu, int i, int j);
-void put_pixel_img(t_env *emu, int x, int y, int color);
-void img_clear(t_env *emu);
-void translate(t_env *emu);
-void choose_color_1(t_env *emu, int i, int j);
-void choose_color_2(t_env *emu, int i, int j);
-void x_rotation(t_env *emu, float angle);
-void y_rotation(t_env *emu, float angle);
-void z_rotation(t_env *emu, float angle);
+void set_basic(t_environment *emu);
+void key_prs_off(int key_code, t_environment *emu);
+void key_prs_rot(int key_code, t_environment *emu);
+void draw_picture_1(t_environment *emu);
+void draw_picture_2(t_environment *emu);
+void create_window(t_environment *emu);
+void draw_line(t_environment *emu);
+void set_default(t_environment *emu);
+void set_color_1(t_environment *emu, int i, int j);
+void set_color_2(t_environment *emu, int i, int j);
+void put_pixel_img(t_environment *emu, int x, int y, int color);
+void img_clear(t_environment *emu);
+void translate(t_environment *emu);
+void choose_color_1(t_environment *emu, int i, int j);
+void choose_color_2(t_environment *emu, int i, int j);
+void x_rotation(t_environment *emu, float angle);
+void y_rotation(t_environment *emu, float angle);
+void z_rotation(t_environment *emu, float angle);
 void calc_x_rot(float *y, float *z, float angle);
 void calc_y_rot(float *x, float *z, float angle);
 void calc_z_rot(float *x, float *y, float angle);
-void make_points(t_env *emu);
-int main_activity(t_env *emu);
-int key_handling(int key_code, t_env *emu);
-int **make_matrix(char **map, t_env *emu);
+void make_points(t_environment *emu);
+int main_activity(t_environment *emu);
+int key_handling(int key_code, t_environment *emu);
+int **make_matrix(char **map, t_environment *emu);
 int round_number(float number);
 int get_red(int color);
 int get_green(int color);
 int get_blue(int color);
-void ft_draw_controls(t_env *emu);
-t_point trans_point_iso(t_point p, t_env *emu);
-t_point trans_point_cab(t_point p, t_env *emu);
-t_point trans_point_plan(t_point p, t_env *emu);
+void ft_draw_controls(t_environment *emu);
+t_point trans_point_iso(t_point point, t_environment *emu);
+t_point trans_point_cab(t_point point, t_environment *emu);
+t_point trans_point_plan(t_point point, t_environment *emu);
 
 #endif

@@ -52,7 +52,7 @@ void calc_z_rot(float *x, float *y, float angle)
 	(*y) = x_init * sinf(angle) + y_init * cosf(angle);
 }
 
-int **make_matrix(char **map, t_env *emu)
+int **make_matrix(char **map, t_environment *emu)
 {
 	int j;
 	int k;

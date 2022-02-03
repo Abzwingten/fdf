@@ -1,6 +1,6 @@
 #include "ft_fdf.h"
 
-int key_handling(int key_code, t_env *emu)
+int key_handling(int key_code, t_environment *emu)
 {
 	ft_putendl(ft_itoa(key_code));
 	if (key_code == 65307)
@@ -16,22 +16,22 @@ int key_handling(int key_code, t_env *emu)
 		emu->color = 3;
 	if (key_code == 105)
 		emu->color = 0;
-	event_1(key_code, emu);
-	event_2(key_code, emu);
+	key_prs_off(key_code, emu);
+	key_prs_rot(key_code, emu);
 	if (key_code == 48)
 		set_default(emu);
 	translate(emu);
 	return (0);
 }
 
-void event_1(int key_code, t_env *emu)
+void key_prs_off(int key_code, t_environment *emu)
 {
 	if (key_code == 61)
-		emu->scale += 5;
+		emu->scale += 1;
 	if (key_code == 45)
 	{
 		if (emu->scale != 1)
-			emu->scale -= 5;
+			emu->scale -= 1;
 	}
 	if (key_code == 97)
 		emu->x_offset -= 5;
@@ -47,7 +47,7 @@ void event_1(int key_code, t_env *emu)
 		emu->scale_z--;
 }
 
-void event_2(int key_code, t_env *emu)
+void key_prs_rot(int key_code, t_environment *emu)
 {
 	if (key_code == 49)
 		emu->projection = 0;
@@ -69,7 +69,7 @@ void event_2(int key_code, t_env *emu)
 		y_rotation(emu, 0.019);
 }
 
-void set_default(t_env *emu)
+void set_default(t_environment *emu)
 {
 	int i;
 	int j;

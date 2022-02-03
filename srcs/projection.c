@@ -1,6 +1,6 @@
 #include "ft_fdf.h"
 
-void make_points(t_env *w)
+void make_points(t_environment *w)
 {
 	int i;
 	int j;
@@ -21,52 +21,52 @@ void make_points(t_env *w)
 	}
 }
 
-t_point trans_point_iso(t_point p, t_env *w)
+t_point trans_point_iso(t_point point, t_environment *w)
 {
 	t_point p_new;
 	float x;
 	float y;
 
-	x = w->scale * p.x * 0.866 + w->scale * (p.y * 0.866);
+	x = w->scale * point.x * 0.866 + w->scale * (point.y * 0.866);
 	x = round_number(x);
 	p_new.x = x + w->x_offset;
-	y = w->scale_z * p.z + w->scale * (p.x * 0.5) - w->scale * (p.y * 0.5);
+	y = w->scale_z * point.z + w->scale * (point.x * 0.5) - w->scale * (point.y * 0.5);
 	y = round_number(y);
 	p_new.y = w->y_offset - y;
 	return (p_new);
 }
 
-t_point trans_point_cab(t_point p, t_env *w)
+t_point trans_point_cab(t_point point, t_environment *w)
 {
 	t_point p_new;
 	float x;
 	float y;
 
-	x = w->scale * p.x * 0.707 + w->scale * (p.y);
+	x = w->scale * point.x * 0.707 + w->scale * (point.y);
 	x = round_number(x);
 	p_new.x = x + w->x_offset;
-	y = w->scale_z * p.z + w->scale * (p.x * 0.707);
+	y = w->scale_z * point.z + w->scale * (point.x * 0.707);
 	y = round_number(y);
 	p_new.y = w->y_offset - y;
 	return (p_new);
 }
 
-t_point trans_point_plan(t_point p, t_env *w)
+t_point trans_point_plan(t_point point, t_environment *w)
 {
 	t_point p_new;
 	float x;
 	float y;
 
-	x = w->scale * p.x * 0.707 + w->scale * (p.y * 0.707);
+	x = w->scale * point.x * 0.707 + w->scale * (point.y * 0.707);
 	x = round_number(x);
 	p_new.x = x + w->x_offset;
-	y = w->scale_z * p.z + w->scale * (p.x * 0.707) - w->scale * (p.y * 0.707);
+	y = w->scale_z * point.z + w->scale * (point.x * 0.707) - w->scale * (point.y * 0.707);
 	y = round_number(y);
 	p_new.y = w->y_offset - y;
 	return (p_new);
 }
 
-void translate(t_env *w)
+void translate(t_environment *w)
 {
 	int i;
 	int j;

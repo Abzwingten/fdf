@@ -2,7 +2,7 @@
 
 int main(int argc, char **argv)
 {
-	t_env emu;
+	t_environment emu;
 	char *file;
 	char **map;
 	int fd;
@@ -38,7 +38,7 @@ void ft_error(int argc, int fd)
 	}
 }
 
-void create_window(t_env *emu)
+void create_window(t_environment *emu)
 {
 	int i;
 
@@ -63,7 +63,7 @@ void create_window(t_env *emu)
 	mlx_loop(emu->mlx);
 }
 
-void set_basic(t_env *emu)
+void set_basic(t_environment *emu)
 {
 	emu->scale = 30;
 	emu->scale_z = 2;
@@ -73,7 +73,7 @@ void set_basic(t_env *emu)
 	emu->color = 0;
 }
 
-int main_activity(t_env *emu)
+int main_activity(t_environment *emu)
 {
 	img_clear(emu);
 	draw_picture_1(emu);
@@ -83,7 +83,7 @@ int main_activity(t_env *emu)
 	return (0);
 }
 
-void ft_draw_controls(t_env *emu)
+void ft_draw_controls(t_environment *emu)
 {
 	mlx_string_put(emu->mlx, emu->window, 10, HEIGHT - 70, 0x00FFFF00, "W/A/S/D to move image");
 	mlx_string_put(emu->mlx, emu->window, 10, HEIGHT - 60, 0x00FFFF00, "-/+ to scale image");

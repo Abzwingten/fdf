@@ -41,49 +41,49 @@ int	local_endian;
 int	color_map_1(void *win,int w,int h);
 int	color_map_2(unsigned char *data,int bpp,int sl,int w,int h,int endian, int type);
 
-int	expose_win1(void *p)
+int	expose_win1(void *point)
 {
   mlx_put_image_to_window(mlx,win1,im3,0,0);
 }
 
-int	expose_win2(void *p)
+int	expose_win2(void *point)
 {
   mlx_put_image_to_window(mlx,win2,im4,0,0);
   mlx_put_image_to_window(mlx,win2,im2,0,0);
 }
 
-int	key_win1(int key,void *p)
+int	key_win1(int key,void *point)
 {
   printf("Key in Win1 : %d\n",key);
   if (key==0xFF1B)
     exit(0);
 }
 
-int	key_win2(int key,void *p)
+int	key_win2(int key,void *point)
 {
   printf("Key in Win2 : %d\n",key);
   if (key==0xFF1B)
     exit(0);
 }
 
-int	key_win3(int key,void *p)
+int	key_win3(int key,void *point)
 {
   printf("Key in Win3 : %d\n",key);
   if (key==0xFF1B)
     mlx_destroy_window(mlx,win3);
 }
 
-int	mouse_win1(int button,int x,int y, void *p)
+int	mouse_win1(int button,int x,int y, void *point)
 {
   printf("Mouse in Win1, button %d at %dx%d.\n",button,x,y);
 }
 
-int	mouse_win2(int button,int x,int y, void *p)
+int	mouse_win2(int button,int x,int y, void *point)
 {
   printf("Mouse in Win2, button %d at %dx%d.\n",button,x,y);
 }
 
-int	mouse_win3(int x,int y, void *p)
+int	mouse_win3(int x,int y, void *point)
 {
   printf("Mouse moving in Win3, at %dx%d.\n",x,y);
 }
