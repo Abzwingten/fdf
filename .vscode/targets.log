@@ -6,11 +6,12 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Feb  1 21:46:08 2022
+# Make data base, printed on Thu Feb  3 12:06:39 2022
 
 # Variables
 
 # environment
+ 
 GDK_BACKEND = x11
 # environment
 LC_ALL = C
@@ -19,7 +20,7 @@ NO_AT_BRIDGE = 1
 # environment
 GTK_RC_FILES = /etc/gtk/gtkrc:/home/matt/.gtkrc:/home/matt/.config/gtkrc
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-dcb429db-bfaa-42e6-9599-9b2e063c8f08.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-74978a7c-82b2-477a-9a61-6e23dd95e183.sock
 # environment
 VSCODE_CWD = /home/matt
 # default
@@ -83,7 +84,6 @@ CFLAGS_OPTIMIZATIONS = -O2 -funroll-loops
 # default
 .SHELLFLAGS := -c
 # environment
- 
 XDG_CONFIG_DIRS = /home/matt/.config/kdedefaults:/etc/xdg
 # makefile (from 'Makefile', line 4)
 SRCS_DIR = ./srcs
@@ -102,13 +102,13 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 20113
+VSCODE_PID = 1435
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/mattarch:@/tmp/.ICE-unix/900,unix/mattarch:/tmp/.ICE-unix/900
+SESSION_MANAGER = local/mattarch:@/tmp/.ICE-unix/881,unix/mattarch:/tmp/.ICE-unix/881
 # automatic
 *F = $(notdir $*)
 # environment
@@ -136,7 +136,7 @@ SHLVL = 0
 # environment
 MAKELEVEL := 0
 # makefile (from 'Makefile', line 22)
-MLX_DIR = ./minilibx
+MLX_DIR = ./minilibx-linux
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
@@ -188,7 +188,7 @@ XDG_VTNR = 7
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 827
+SYSTEMD_EXEC_PID = 808
 # makefile (from 'Makefile', line 56)
 RED = "\033[0;31m"
 # environment
@@ -264,10 +264,10 @@ GDMSESSION = plasma
 
 # Directories
 
-# . (device 2081, inode 14145): 16 files, no impossibilities.
+# . (device 2081, inode 14145): 13 files, no impossibilities.
 # srcs (device 2081, inode 13487): No files, no impossibilities so far.
 
-# 16 files, no impossibilities in 2 directories.
+# 13 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -312,9 +312,16 @@ debug: clean_self
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-01-29 15:09:30.8337134
+#  Last modified 2022-02-01 22:16:15.174609
 #  File has been updated.
 #  Successfully updated.
+
+# Not a target:
+ 
+minilibx-linux/libmlx.a:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 libft/libft.a:
@@ -363,7 +370,7 @@ clean_self:
 	@if [ -d "$(OBJS_DIR)" ]; then rm -rfv $(OBJS_DIR); fi
 	@echo -n $(DEFAULT)
 
-fdf: objs/calculus.o objs/drawing.o objs/fdf.o objs/rotation.o objs/color.o objs/events.o objs/projection.o libft/libft.a minilibx/libmlx.a
+fdf: objs/calculus.o objs/drawing.o objs/fdf.o objs/rotation.o objs/color.o objs/events.o objs/projection.o libft/libft.a minilibx-linux/libmlx.a
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -401,7 +408,6 @@ all:
 # automatic
 # | := 
 # variable set hash-table stats:
- 
 # Load=8/32=25%, Rehash=0, Collisions=7/32=22%
 #  recipe to execute (from 'Makefile', line 64):
 	@echo -c $(CYAN) "Making libft" $(DEFAULT)
@@ -464,12 +470,6 @@ objs/calculus.o:
 #  File has not been updated.
 
 # Not a target:
-minilibx/libmlx.a:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
 .SUFFIXES:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -488,12 +488,12 @@ minilibx/libmlx.a:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 41 / storage = 397 B / avg = 9 B
-# current buf: size = 8162 B / used = 397 B / count = 41 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 40 / storage = 400 B / avg = 10 B
+# current buf: size = 8162 B / used = 400 B / count = 40 / avg = 10 B
 
-# strcache performance: lookups = 79 / hit rate = 48%
+# strcache performance: lookups = 76 / hit rate = 47%
 # hash-table stats:
-# Load=41/8192=1%, Rehash=0, Collisions=0/79=0%
-# Finished Make data base on Tue Feb  1 21:46:08 2022
+# Load=40/8192=0%, Rehash=0, Collisions=0/76=0%
+# Finished Make data base on Thu Feb  3 12:06:39 2022
 
  

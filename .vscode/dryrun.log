@@ -2,6 +2,7 @@ make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/matt/Documents/GIT/ECOLE42/fdf'
 echo -c "\033[0;36m" "Making libft" "\033[0;0m"
 make -s -C ./libft
+ 
 make[1]: Entering directory '/home/matt/Documents/GIT/ECOLE42/fdf/libft'
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_is/ft_isalnum.c -o ft_is/ft_isalnum.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_is/ft_isalpha.c -o ft_is/ft_isalpha.o
@@ -21,7 +22,6 @@ gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_lst/ft_lstdelone.c -o ft_lst/ft
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_lst/ft_lstiter.c -o ft_lst/ft_lstiter.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_lst/ft_lstlast.c -o ft_lst/ft_lstlast.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_lst/ft_lstmap.c -o ft_lst/ft_lstmap.o
- 
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_lst/ft_lstnew.c -o ft_lst/ft_lstnew.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_lst/ft_lstsize.c -o ft_lst/ft_lstsize.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_math/ft_abs.c -o ft_math/ft_abs.o
@@ -79,6 +79,7 @@ gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_gnl/gnl.c -o ft_gnl/gnl.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_gnl/utils_gnl.c -o ft_gnl/utils_gnl.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_choose.c -o ft_printf/ft_choose.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_convert_c.c -o ft_printf/ft_convert_c.o
+ 
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_convert_d.c -o ft_printf/ft_convert_d.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_convert_p.c -o ft_printf/ft_convert_p.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_convert_pct.c -o ft_printf/ft_convert_pct.o
@@ -88,6 +89,7 @@ gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_initializer.c -o ft_p
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_parser_args.c -o ft_printf/ft_parser_args.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_parser_asterix.c -o ft_printf/ft_parser_asterix.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_parser.c -o ft_printf/ft_parser.o
+ 
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_place_bin.c -o ft_printf/ft_place_bin.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_printf.c -o ft_printf/ft_printf.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_uitoa_base.c -o ft_printf/ft_uitoa_base.o
@@ -96,27 +98,26 @@ ar rcs libft.a ft_is/ft_isalnum.o ft_is/ft_isalpha.o ft_is/ft_isascii.o ft_is/ft
 echo -e "\033[0;45mMEGA LIBFT DONE\033[0m "
 make[1]: Leaving directory '/home/matt/Documents/GIT/ECOLE42/fdf/libft'
 echo -c "\033[0;36m" "Making minilibx" "\033[0;0m"
-make -s -C ./minilibx
- 
-make[1]: Entering directory '/home/matt/Documents/GIT/ECOLE42/fdf/minilibx'
+make -s -C ./minilibx-linux
+make[1]: Entering directory '/home/matt/Documents/GIT/ECOLE42/fdf/minilibx-linux'
 ./configure
-make[1]: Leaving directory '/home/matt/Documents/GIT/ECOLE42/fdf/minilibx'
-cp ./minilibx/libmlx.a libmlx.a
+make[1]: Leaving directory '/home/matt/Documents/GIT/ECOLE42/fdf/minilibx-linux'
+cp ./minilibx-linux/libmlx.a libmlx.a
 mkdir -p ./objs
 echo "\033[0;36m" "Making fdf" "\033[0;0m"
 make -s fdf
- 
 make[1]: Entering directory '/home/matt/Documents/GIT/ECOLE42/fdf'
- 
-cc  -Wall -Wextra -Werror -O2 -funroll-loops  -I./includes -I./libft/includes -I./libft -I./minilibx  -c -o objs/calculus.o srcs/calculus.c
-cc  -Wall -Wextra -Werror -O2 -funroll-loops  -I./includes -I./libft/includes -I./libft -I./minilibx  -c -o objs/drawing.o srcs/drawing.c
-cc  -Wall -Wextra -Werror -O2 -funroll-loops  -I./includes -I./libft/includes -I./libft -I./minilibx  -c -o objs/fdf.o srcs/fdf.c
-cc  -Wall -Wextra -Werror -O2 -funroll-loops  -I./includes -I./libft/includes -I./libft -I./minilibx  -c -o objs/rotation.o srcs/rotation.c
-cc  -Wall -Wextra -Werror -O2 -funroll-loops  -I./includes -I./libft/includes -I./libft -I./minilibx  -c -o objs/color.o srcs/color.c
-cc  -Wall -Wextra -Werror -O2 -funroll-loops  -I./includes -I./libft/includes -I./libft -I./minilibx  -c -o objs/events.o srcs/events.c
-cc  -Wall -Wextra -Werror -O2 -funroll-loops  -I./includes -I./libft/includes -I./libft -I./minilibx  -c -o objs/projection.o srcs/projection.c
-cc -o fdf ./objs/calculus.o ./objs/drawing.o ./objs/fdf.o ./objs/rotation.o ./objs/color.o ./objs/events.o ./objs/projection.o -lX11 -lXext -lm -L./libft -lft -L./minilibx -lmlx
 make[1]: Leaving directory '/home/matt/Documents/GIT/ECOLE42/fdf'
-echo "\033[0;31m" "FDF DONE" "\033[0;0m"
 make: Leaving directory '/home/matt/Documents/GIT/ECOLE42/fdf'
+ 
+make[1]: *** No rule to make target 'objs/calculus.o', needed by 'fdf'.
+make[1]: *** No rule to make target 'objs/drawing.o', needed by 'fdf'.
+make[1]: *** No rule to make target 'objs/fdf.o', needed by 'fdf'.
+make[1]: *** No rule to make target 'objs/rotation.o', needed by 'fdf'.
+make[1]: *** No rule to make target 'objs/color.o', needed by 'fdf'.
+make[1]: *** No rule to make target 'objs/events.o', needed by 'fdf'.
+make[1]: *** No rule to make target 'objs/projection.o', needed by 'fdf'.
+make[1]: *** No rule to make target 'libft/libft.a', needed by 'fdf'.
+make[1]: *** No rule to make target 'minilibx-linux/libmlx.a', needed by 'fdf'.
+make: *** [Makefile:71: all] Error 2
  
