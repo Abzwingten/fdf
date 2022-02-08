@@ -79,7 +79,6 @@ gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_gnl/gnl.c -o ft_gnl/gnl.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_gnl/utils_gnl.c -o ft_gnl/utils_gnl.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_choose.c -o ft_printf/ft_choose.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_convert_c.c -o ft_printf/ft_convert_c.o
- 
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_convert_d.c -o ft_printf/ft_convert_d.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_convert_p.c -o ft_printf/ft_convert_p.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_convert_pct.c -o ft_printf/ft_convert_pct.o
@@ -89,7 +88,6 @@ gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_initializer.c -o ft_p
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_parser_args.c -o ft_printf/ft_parser_args.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_parser_asterix.c -o ft_printf/ft_parser_asterix.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_parser.c -o ft_printf/ft_parser.o
- 
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_place_bin.c -o ft_printf/ft_place_bin.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_printf.c -o ft_printf/ft_printf.o
 gcc -Wall -Wextra -Werror -Iincludes/ -O2  -c ft_printf/ft_uitoa_base.c -o ft_printf/ft_uitoa_base.o

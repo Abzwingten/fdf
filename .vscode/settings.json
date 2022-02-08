@@ -5,6 +5,7 @@
 		"ft_fdf.h": "c",
 		"limits": "c",
 		"*.tcc": "c",
-		"types.h": "c"
+		"types.h": "c",
+		"stat.h": "c"
 	}
 }

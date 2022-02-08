@@ -4,13 +4,13 @@
 #define WIDTH 1024
 #define HEIGHT 600
 
-# include <stdlib.h>
+#include <stdlib.h>
 #include <math.h>
-#include <mlx.h>
-#include "libft.h"
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <mlx.h>
+#include <libft.h>
 
 typedef struct s_point
 {

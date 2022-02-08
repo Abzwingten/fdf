@@ -8,8 +8,8 @@ if (len(sys.argv) > 1):
 	data = bytearray(data)
 	file.close()
 
-	#for i in range(0, 155):
-	#	print int(data[i])
+	for i in range(0, 155):
+		print int(data[i])
 
 	width = int(data[18])
 	print (width)

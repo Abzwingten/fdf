@@ -6,29 +6,55 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Feb  3 12:06:39 2022
+# Make data base, printed on Tue Feb  8 15:57:11 2022
 
 # Variables
 
 # environment
- 
+ZSH_HIGHLIGHT_REVISION = HEAD
+# environment
+JAVA_HOME = /usr/lib/jvm/java-8-openjdk
+# environment
 GDK_BACKEND = x11
 # environment
 LC_ALL = C
 # environment
 NO_AT_BRIDGE = 1
 # environment
+_ZSH_HIGHLIGHT_PRIOR_BUFFER = 
+# environment
+blue_op = %{[1m[34m%}[%{[m%}
+# environment
 GTK_RC_FILES = /etc/gtk/gtkrc:/home/matt/.gtkrc:/home/matt/.config/gtkrc
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-74978a7c-82b2-477a-9a61-6e23dd95e183.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-344deb2d-e0b3-45b1-8762-114c952fa441.sock
+# environment
+ZSH_HIGHLIGHT_VERSION = 0.8.0-alpha2-dev
 # environment
 VSCODE_CWD = /home/matt
+# environment
+WINDOWPATH = 2
+# environment
+LESS_TERMCAP_me = [0m
+# environment
+__DURATION_INFO_PREEXEC_REALTIME = 1644325005.7271380424
+# environment
+_history_substring_search_result = startx
 # default
 MAKE_COMMAND := make
+# environment
+HISTFILE = /home/matt/.zhistory
 # makefile (from 'Makefile', line 47)
 CFLAGS_FINAL = $(CFLAGS_INTERNAL) $(CFLAGS_ERRORS) $(CFLAGS_OPTIMIZATIONS) $(CFLAGS_DEPENDENCIES) $(CFLAGS_INCLUDES) $(CFLAGS)
+# environment
+_history_substring_search_refresh_display = 
+ 
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
+# environment
+count = 7
+# environment
+UPDATE_ZSH_DAYS = 13
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -41,6 +67,8 @@ DEFAULT = "\033[0;0m"
 %D = $(patsubst %/,%,$(dir $%))
 # environment
 MAIL = /var/spool/mail/matt
+# environment
+OLDPWD = /home/matt
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
@@ -48,21 +76,29 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/matt/.config/Code - OSS/CachedData/899d46d82c4c95423fb7e10e68eba52050e30ba3
+zsh_highlight__pat_static_bug = false
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+VSCODE_CODE_CACHE_PATH = /home/matt/.config/Code - OSS/CachedData/5554b12acf27056905806867f251c859323ff7e9
+# environment
+_history_substring_search_match_index = 0
 # environment
 LANG = C
+# environment
+PR_WHITE = %{[1m[37m%}
 # environment
 XAUTHORITY = /home/matt/.Xauthority
 # default
 .LOADED := 
+# environment
+LESS_TERMCAP_md = [1;31m
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # makefile (from 'Makefile', line 59)
 CYAN = "\033[0;36m"
 # makefile
 MAKEFLAGS = pqrR
+# environment
+LESS_TERMCAP_so = [7m
 # makefile (from 'Makefile', line 58)
 BLUE = "\033[0;34m"
 # makefile
@@ -78,11 +114,15 @@ SRCS = $(addprefix $(SRCS_DIR)/, $(SRC_FILES))
 # makefile (from 'Makefile', line 43)
 CFLAGS_INCLUDES = -I$(INCLUDES_DIR) -I$(LIBFT_INC_DIR) -I$(LIB_DIR) -I$(MLX_DIR)
 # environment
+LESS_TERMCAP_ue = [0m
+# environment
 MFLAGS = -pqrR
 # makefile (from 'Makefile', line 42)
 CFLAGS_OPTIMIZATIONS = -O2 -funroll-loops
 # default
 .SHELLFLAGS := -c
+# environment
+HISTSIZE = 10000
 # environment
 XDG_CONFIG_DIRS = /home/matt/.config/kdedefaults:/etc/xdg
 # makefile (from 'Makefile', line 4)
@@ -92,63 +132,93 @@ SRCS_DIR = ./srcs
 # environment
 XCURSOR_THEME = breeze_cursors
 # environment
-XDG_SESSION_DESKTOP = plasma
-# environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"Code - OSS","submitURL":"","uploadToServer":false}
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST := Makefile
+# environment
+PR_LIGHT_WHITE = %{[37m%}
 # automatic
 @F = $(notdir $@)
 # environment
+PR_RED = %{[1m[31m%}
+# environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 1435
+VSCODE_PID = 2164
 # environment
-XDG_SESSION_TYPE = x11
+PR_LIGHT_YELLOW = %{[33m%}
+# environment
+XDG_SESSION_TYPE = tty
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/mattarch:@/tmp/.ICE-unix/881,unix/mattarch:/tmp/.ICE-unix/881
+SESSION_MANAGER = local/mattarch:@/tmp/.ICE-unix/1013,unix/mattarch:/tmp/.ICE-unix/1013
 # automatic
 *F = $(notdir $*)
+# environment
+PR_GREEN = %{[1m[32m%}
 # environment
 CHROME_DESKTOP = code-oss.desktop
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # makefile (from 'Makefile', line 9)
 LIB = libft.a
+# environment
+PR_MAGENTA = %{[1m[35m%}
+# environment
+_history_substring_search_raw_match_index = 0
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 BREAKPAD_DUMP_LOCATION = /home/matt/.config/Code - OSS/exthost Crash Reports
+# environment
+ANDROID_SDK_ROOT = /opt/android-sdk
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # makefile (from 'Makefile', line 17)
 OBJS = $(patsubst $(SRCS_DIR)/%.c,$(OBJS_DIR)/%.o, $(SRCS))
 # makefile (from 'Makefile', line 1)
 SHELL = /bin/zsh
+# environment
+LESS_TERMCAP_us = [1;32m
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 0
+SHLVL = 2
 # environment
 MAKELEVEL := 0
 # makefile (from 'Makefile', line 22)
 MLX_DIR = ./minilibx-linux
+# environment
+PR_LIGHT_GREEN = %{[32m%}
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+PATH = /home/matt/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl/home/matt/bin:/usr/local/bin:/home/matt/bin:/usr/local/bin:/home/matt/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/matt/Documents/GIT/flutter/bin:/home/matt/Documents/GIT/flutter/bin:/home/matt/.platformio/penv/bin:/home/matt/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+# environment
+LESS_TERMCAP_se = [27m
 # default
 MAKEFILES := 
 # environment
+zsh_highlight__memo_feature = 0
+# environment
 MOTD_SHOWN = pam
+# environment
+_ZSH_HIGHLIGHT_PRIOR_CURSOR = 0
 # automatic
 ^F = $(notdir $^)
+# environment
+_history_substring_search_query = 
+# environment
+LESS_TERMCAP_mb = [1;31m
+# environment
+INVOCATION_ID = 911a2e3906d444488b2a3756029232f3
 # makefile (from 'Makefile', line 5)
 INCLUDES_DIR = ./includes
+# environment
+color = WHITE
 # environment
 VSCODE_LOG_NATIVE = false
 # makefile (from 'Makefile', line 44)
@@ -157,6 +227,8 @@ CFLAGS_DEBUG = -O0 -pg -g
 GREEN = "\033[0;32m"
 # makefile (from 'Makefile', line 21)
 MLX = libmlx.a
+# environment
+PR_BLUE = %{[1m[34m%}
 # automatic
 ?F = $(notdir $?)
 # environment
@@ -166,35 +238,51 @@ NAME = fdf
 # environment
 XDG_SEAT = seat0
 # environment
+PR_LIGHT_CYAN = %{[36m%}
+# environment
+blue_cp = %{[1m[34m%}]%{[m%}
+# environment
 XDG_CURRENT_DESKTOP = KDE
 # makefile (from 'Makefile', line 19)
 UNAME_S := Linux
 # makefile (from 'Makefile', line 41)
 CFLAGS_ERRORS = -Wall -Wextra -Werror
+# environment
+LS_COLORS = di=1;34:ln=35:so=32:pi=33:ex=31:bd=1;36:cd=1;33:su=30;41:sg=30;46:tw=30;42:ow=30;43
 # automatic
 +F = $(notdir $+)
 # environment
-XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
-# environment
-DESKTOP_SESSION = plasma
+PR_CYAN = %{[1m[36m%}
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = KDE
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
+GREP_COLOR = 1;33
+# environment
+GREP_COLORS = mt=37;45
+# environment
 LOGNAME = matt
 # environment
-XDG_VTNR = 7
+PR_YELLOW = %{[1m[33m%}
+# environment
+user_host = %{[1m[34m%}[%{[m%}%B%{[1m[32m%}%n@%m%{[m%}%{[1m[34m%}]%{[m%}
+# environment
+XDG_VTNR = 2
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 808
+SYSTEMD_EXEC_PID = 715
+# environment
+_history_substring_search_query_highlight = 
+# environment
+SAVEHIST = 10000
 # makefile (from 'Makefile', line 56)
 RED = "\033[0;31m"
 # environment
-DISPLAY = :0
+EDITOR = mvim
 # environment
-GTK_MODULES = canberra-gtk-module
+DISPLAY = :0
 # environment
 USER = matt
 # default
@@ -205,18 +293,30 @@ KDE_SESSION_UID = 1000
 SRC_FILES = calculus.c  drawing.c  fdf.c         rotation.c color.c     events.c   projection.c
 # 'override' directive
 .SHELLSTATUS := 0
+# environment
+duration_info =  took %B%F{yellow}6s%f%b
 # makefile (from 'Makefile', line 52)
 LDFLAGS = -lX11 -lXext -lm -L$(LIB_DIR) -lft -L$(MLX_DIR) -lmlx
+# environment
+PR_NO_COLOUR = %{[m%}
+# environment
+PR_LIGHT_MAGENTA = %{[35m%}
 # makefile (from 'Makefile', line 7)
 OBJS_DIR = ./objs
+# environment
+PAGER = less
 # environment
 _ = /usr/bin/make
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
+GREP_OPTIONS = --color=auto
+# environment
 XDG_SESSION_CLASS = user
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+path_p = %{[1m[34m%}[%{[m%}%{[1m[35m%}%/%{[m%}%{[1m[34m%}]%{[m%}%b
 # environment
 GTK2_RC_FILES = /etc/gtk-2.0/gtkrc:/home/matt/.gtkrc-2.0:/home/matt/.config/gtkrc-2.0
 # environment
@@ -224,11 +324,17 @@ HOME = /home/matt
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-845cc839-1.63.2-main.sock
+PR_LIGHT_BLUE = %{[34m%}
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-845cc839-1.64.0-main.sock
+# environment
+TERM = linux
 # makefile (from 'Makefile', line 6)
 LIBFT_INC_DIR = ./libft/includes
 # environment
-XDG_SESSION_ID = 2
+XDG_SESSION_ID = 1
+# environment
+PR_LIGHT_RED = %{[31m%}
 # environment
 XCURSOR_SIZE = 24
 # default
@@ -246,17 +352,14 @@ ELECTRON_NO_ATTACH_CONSOLE = 1
 # makefile (from 'Makefile', line 10)
 LIB_DIR = ./libft
 # environment
-XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/matt
-# environment
 KDE_SESSION_VERSION = 5
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
 # environment
 KDE_FULL_SESSION = true
-# environment
-GDMSESSION = plasma
 # variable set hash-table stats:
-# Load=122/1024=12%, Rehash=0, Collisions=10/199=5%
+ 
+# Load=173/1024=17%, Rehash=0, Collisions=24/250=10%
 
 # Pattern-specific Variable Values
 
@@ -264,10 +367,10 @@ GDMSESSION = plasma
 
 # Directories
 
-# . (device 2081, inode 14145): 13 files, no impossibilities.
+# . (device 2081, inode 14145): 14 files, no impossibilities.
 # srcs (device 2081, inode 13487): No files, no impossibilities so far.
 
-# 13 files, no impossibilities in 2 directories.
+# 14 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -317,7 +420,6 @@ Makefile:
 #  Successfully updated.
 
 # Not a target:
- 
 minilibx-linux/libmlx.a:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -488,12 +590,12 @@ objs/calculus.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 40 / storage = 400 B / avg = 10 B
-# current buf: size = 8162 B / used = 400 B / count = 40 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 41 / storage = 408 B / avg = 9 B
+# current buf: size = 8162 B / used = 408 B / count = 41 / avg = 9 B
 
-# strcache performance: lookups = 76 / hit rate = 47%
+# strcache performance: lookups = 77 / hit rate = 46%
 # hash-table stats:
-# Load=40/8192=0%, Rehash=0, Collisions=0/76=0%
-# Finished Make data base on Thu Feb  3 12:06:39 2022
+# Load=41/8192=1%, Rehash=0, Collisions=0/77=0%
+# Finished Make data base on Tue Feb  8 15:57:11 2022
 
  
