@@ -69,10 +69,10 @@ void put_pixel_img(t_environment *emu, int x, int y, int color)
 	char *px;
 	int point;
 
-	if ((x > 0 && x < WIDTH) && (y > 0 && y < HEIGHT))
+	if ((x > 0 && x < FT_WIDTH) && (y > 0 && y < HEIGHT))
 	{
 		px = mlx_get_data_addr(emu->image, &point, &point, &point);
-		point = WIDTH * y * 4 + x * 4;
+		point = FT_WIDTH * y * 4 + x * 4;
 		px[point + 0] = get_red(color);
 		px[point + 1] = get_green(color);
 		px[point + 2] = get_blue(color);
@@ -85,5 +85,5 @@ void img_clear(t_environment *emu)
 	int point;
 
 	px = mlx_get_data_addr(emu->image, &point, &point, &point);
-	ft_bzero(px, 4 * WIDTH * HEIGHT);
+	ft_bzero(px, 4 * FT_WIDTH * HEIGHT);
 }
