@@ -19,7 +19,7 @@ int round_number(float number)
 	return ((int)((dec + 1)) * flag);
 }
 
-void calc_x_rot(float *y, float *z, float angle)
+void calculate_x_rot(float *y, float *z, float angle)
 {
 	float y_init;
 	float z_init;
@@ -30,7 +30,7 @@ void calc_x_rot(float *y, float *z, float angle)
 	(*z) = (-y_init) * sinf(angle) + z_init * cosf(angle);
 }
 
-void calc_y_rot(float *x, float *z, float angle)
+void calculate_y_rot(float *x, float *z, float angle)
 {
 	float x_init;
 	float z_init;
@@ -41,7 +41,7 @@ void calc_y_rot(float *x, float *z, float angle)
 	(*z) = (-x_init) * sinf(angle) + z_init * cosf(angle);
 }
 
-void calc_z_rot(float *x, float *y, float angle)
+void calculate_z_rot(float *x, float *y, float angle)
 {
 	float y_init;
 	float x_init;

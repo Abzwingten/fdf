@@ -4,8 +4,14 @@ void draw_line(t_environment *emu)
 {
 	emu->line.dx = fabs(emu->point2.x - emu->point_1.x);
 	emu->line.dy = fabs(emu->point2.y - emu->point_1.y);
-	emu->line.sign_x = emu->point_1.x < emu->point2.x ? 1 : -1;
-	emu->line.sign_y = emu->point_1.y < emu->point2.y ? 1 : -1;
+	if (emu->point_1.x < emu->point2.x)
+		emu->line.sign_x = 1;
+	else
+		emu->line.sign_x = -1;
+	if (emu->point_1.y < emu->point2.y)
+		emu->line.sign_y = 1;
+	else
+		emu->line.sign_y = -1;
 	emu->line.error1 = emu->line.dx - emu->line.dy;
 	while (emu->point_1.x != emu->point2.x || emu->point_1.y != emu->point2.y)
 	{
