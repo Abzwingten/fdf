@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   fdf.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rantario <rantario@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/09 20:33:33 by rantario          #+#    #+#             */
+/*   Updated: 2022/03/09 20:35:44 by rantario         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_fdf.h"
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	t_environment emu;
-	char *file;
-	char **map;
-	int fd;
+	t_environment	emu;
+	char			*file;
+	char			**map;
+	int				fd;
 
 	map = (char **)malloc(sizeof(char *) * 1000);
 	ft_bzero(map, 1000);
@@ -24,7 +36,7 @@ int main(int argc, char **argv)
 	return (0);
 }
 
-void ft_error(int argc, int fd)
+void	ft_error(int argc, int fd)
 {
 	if (argc != 2)
 	{
@@ -38,9 +50,9 @@ void ft_error(int argc, int fd)
 	}
 }
 
-void create_window(t_environment *emu)
+void	create_window(t_environment *emu)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	set_basic(emu);
@@ -63,7 +75,7 @@ void create_window(t_environment *emu)
 	mlx_loop(emu->mlx);
 }
 
-void set_basic(t_environment *emu)
+void	set_basic(t_environment *emu)
 {
 	emu->scale = 30;
 	emu->scale_z = 2;
@@ -73,7 +85,7 @@ void set_basic(t_environment *emu)
 	emu->color = 0;
 }
 
-int main_activity(t_environment *emu)
+int	main_activity(t_environment *emu)
 {
 	img_clear(emu);
 	draw_picture_1(emu);
@@ -81,15 +93,4 @@ int main_activity(t_environment *emu)
 	mlx_put_image_to_window(emu->mlx, emu->window, emu->image, 0, 0);
 	ft_draw_controls(emu);
 	return (0);
-}
-
-void ft_draw_controls(t_environment *emu)
-{
-	mlx_string_put(emu->mlx, emu->window, 10, HEIGHT - 70, 0x00FFFF00, "W/A/S/D to move image");
-	mlx_string_put(emu->mlx, emu->window, 10, HEIGHT - 60, 0x00FFFF00, "-/+ to scale image");
-	mlx_string_put(emu->mlx, emu->window, 10, HEIGHT - 50, 0x00FFFF00, "R/G/B - to change colors");
-	mlx_string_put(emu->mlx, emu->window, 10, HEIGHT - 40, 0x00FFFF00, "Q/E - for x axis rotation");
-	mlx_string_put(emu->mlx, emu->window, 10, HEIGHT - 30, 0x00FFFF00, "arrow up/arrow down - for z axis rotation");
-	mlx_string_put(emu->mlx, emu->window, 10, HEIGHT - 20, 0x00FFFF00, "arrow left/arrow right - for y axis rotation");
-	mlx_string_put(emu->mlx, emu->window, 10, HEIGHT - 10, 0x00FFFF00, "ESC - for exit");
 }

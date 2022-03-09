@@ -9,8 +9,8 @@ OBJS_DIR = ./objs
 LIB = libft.a
 LIB_DIR = ./libft
 
-SRC_FILES =	calculus.c  drawing.c  fdf.c         rotation.c \
-color.c     events.c   projection.c
+SRC_FILES =	calculus.c	drawing.c	fdf.c		rotation.c \
+			color.c		events.c	projection.c	draw_controls.c
 
 
 SRCS = $(addprefix $(SRCS_DIR)/, $(SRC_FILES))
