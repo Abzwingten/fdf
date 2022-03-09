@@ -1,56 +1,119 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_fdf.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rantario <rantario@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/09 14:31:50 by rantario          #+#    #+#             */
+/*   Updated: 2022/03/09 20:23:35 by rantario         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_FDF_H
 # define FT_FDF_H
 
-#define WIDTH 1024
-#define HEIGHT 600
+# define WIDTH 1024
+# define HEIGHT 600
 
-#include <stdlib.h>
-#include <math.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <mlx.h>
-#include <libft.h>
+# include <stdlib.h>
+# include <math.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+# include <mlx.h>
+# include <libft.h>
+
+# if defined(__APPLE__)
+#  define KEY_W 13
+#  define KEY_D 2
+#  define KEY_A 0
+#  define KEY_S 1
+#  define KEY_PLUS 24
+#  define KEY_MINUS 78
+#  define KEY_ESC 53
+#  define KEY_1 18
+#  define KEY_2 12
+#  define KEY_3 20
+#  define KEY_LEFT 123
+#  define KEY_RIGHT 124
+#  define KEY_UP 126
+#  define KEY_DOWN 125
+#  define KEY_R 15
+#  define KEY_G 5
+#  define KEY_B 11
+#  define KEY_I 34
+#  define KEY_0 29
+#  define KEY_E 14
+#  define KEY_Q 12
+#  define KEY_BR_L 33
+#  define KEY_BR_R 30
+
+# elif __linux__
+#  define KEY_W 119
+#  define KEY_D 100
+#  define KEY_A 97
+#  define KEY_S 115
+#  define KEY_PLUS 61
+#  define KEY_MINUS 45
+#  define KEY_ESC 65307
+#  define KEY_1 49
+#  define KEY_2 50
+#  define KEY_3 51
+#  define KEY_LEFT 65361
+#  define KEY_RIGHT 65363
+#  define KEY_UP 65362
+#  define KEY_DOWN 65364
+#  define KEY_R 114
+#  define KEY_G 103
+#  define KEY_B 98
+#  define KEY_I 105
+#  define KEY_0 48
+#  define KEY_E 101
+#  define KEY_Q 113
+#  define KEY_BR_L 91
+#  define KEY_BR_R 93
+# endif
 
 typedef struct s_point
 {
-	float x;
-	float y;
-	float z;
-} t_point;
+	float	x;
+	float	y;
+	float	z;
+}	t_point;
 
 typedef struct s_line
 {
-	int error1;
-	int error2;
-	int sign_x;
-	int sign_y;
-	int dx;
-	int dy;
-	int color;
-} t_line;
+	int	error1;
+	int	error2;
+	int	sign_x;
+	int	sign_y;
+	int	dx;
+	int	dy;
+	int	color;
+}	t_line;
 
 typedef struct s_environment
 {
-	void *mlx;
-	void *window;
-	void *image;
-	int **matrix;
-	int row;
-	int col;
-	int scale;
-	int scale_z;
-	int x_offset;
-	int y_offset;
-	int projection;
-	int color;
-	t_point point_1;
-	t_point point2;
-	t_point **init;
-	t_point **pts;
-	t_point **trans;
-	t_line line;
-} t_environment;
+	void	*mlx;
+	void	*window;
+	void	*image;
+	int		**matrix;
+	int		row;
+	int		col;
+	int		scale;
+	int		scale_z;
+	int		x_offset;
+	int		y_offset;
+	int		projection;
+	int		color;
+	t_point	point_1;
+	t_point	point2;
+	t_point	**init;
+	t_point	**pts;
+	t_point	**trans;
+	t_line	line;
+}	t_environment;
 
 void ft_error(int argc, int fd);
 void set_basic(t_environment *emu);

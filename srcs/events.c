@@ -1,78 +1,90 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   events.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rantario <rantario@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/09 16:58:51 by rantario          #+#    #+#             */
+/*   Updated: 2022/03/09 20:22:05 by rantario         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_fdf.h"
 
-int key_handling(int key_code, t_environment *emu)
+int	key_handling(int key_code, t_environment *emu)
 {
 	ft_putendl(ft_itoa(key_code));
-	if (key_code == 65307)
+	if (key_code == KEY_ESC)
 	{
 		ft_putendl("Exit");
 		exit(0);
 	}
-	if (key_code == 114)
+	if (key_code == KEY_R)
 		emu->color = 1;
-	if (key_code == 103)
+	if (key_code == KEY_G)
 		emu->color = 2;
-	if (key_code == 98)
+	if (key_code == KEY_B)
 		emu->color = 3;
-	if (key_code == 105)
+	if (key_code == KEY_I)
 		emu->color = 0;
 	key_prs_off(key_code, emu);
 	key_prs_rot(key_code, emu);
-	if (key_code == 48)
+	if (key_code == KEY_0)
 		set_default(emu);
 	translate(emu);
 	return (0);
 }
 
-void key_prs_off(int key_code, t_environment *emu)
+void	key_prs_off(int key_code, t_environment *emu)
 {
-	if (key_code == 61)
+	if (key_code == KEY_PLUS)
 		emu->scale += 1;
-	if (key_code == 45)
+	if (key_code == KEY_MINUS)
 	{
 		if (emu->scale != 1)
 			emu->scale -= 1;
 	}
-	if (key_code == 97)
+	if (key_code == KEY_A)
 		emu->x_offset -= 5;
-	if (key_code == 100)
+	if (key_code == KEY_D)
 		emu->x_offset += 5;
-	if (key_code == 119)
+	if (key_code == KEY_W)
 		emu->y_offset -= 5;
-	if (key_code == 115)
+	if (key_code == KEY_S)
 		emu->y_offset += 5;
-	if (key_code == 91)
+	if (key_code == KEY_BR_L)
 		emu->scale_z++;
-	if (key_code == 93)
+	if (key_code == KEY_BR_R)
 		emu->scale_z--;
 }
 
-void key_prs_rot(int key_code, t_environment *emu)
+void	key_prs_rot(int key_code, t_environment *emu)
 {
-	if (key_code == 49)
+	if (key_code == KEY_1)
 		emu->projection = 0;
-	if (key_code == 50)
+	if (key_code == KEY_2)
 		emu->projection = 1;
-	if (key_code == 51)
+	if (key_code == KEY_3)
 		emu->projection = 2;
-	if (key_code == 101)
+	if (key_code == KEY_E)
 		x_rotation(emu, 0.019);
-	if (key_code == 113)
+	if (key_code == KEY_Q)
 		x_rotation(emu, -0.019);
-	if (key_code == 65361)
+	if (key_code == KEY_LEFT)
 		z_rotation(emu, 0.019);
-	if (key_code == 65363)
+	if (key_code == KEY_RIGHT)
 		z_rotation(emu, -0.019);
-	if (key_code == 65362)
+	if (key_code == KEY_UP)
 		y_rotation(emu, -0.019);
-	if (key_code == 65364)
+	if (key_code == KEY_DOWN)
 		y_rotation(emu, 0.019);
 }
 
-void set_default(t_environment *emu)
+void	set_default(t_environment *emu)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	emu->scale = 30;

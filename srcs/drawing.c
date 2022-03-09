@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   drawing.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rantario <rantario@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/09 14:35:57 by rantario          #+#    #+#             */
+/*   Updated: 2022/03/09 16:24:24 by rantario         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_fdf.h"
 
-void draw_line(t_environment *emu)
+void	draw_line(t_environment *emu)
 {
 	emu->line.dx = fabs(emu->point2.x - emu->point_1.x);
 	emu->line.dy = fabs(emu->point2.y - emu->point_1.y);
@@ -30,10 +42,10 @@ void draw_line(t_environment *emu)
 	}
 }
 
-void draw_picture_1(t_environment *emu)
+void	draw_picture_1(t_environment *emu)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = -1;
 	while (++i < emu->row)
@@ -50,10 +62,10 @@ void draw_picture_1(t_environment *emu)
 	}
 }
 
-void draw_picture_2(t_environment *emu)
+void	draw_picture_2(t_environment *emu)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	j = -1;
 	while (++j < emu->col)
@@ -70,10 +82,10 @@ void draw_picture_2(t_environment *emu)
 	}
 }
 
-void put_pixel_img(t_environment *emu, int x, int y, int color)
+void	put_pixel_img(t_environment *emu, int x, int y, int color)
 {
-	char *px;
-	int point;
+	char	*px;
+	int		point;
 
 	if ((x > 0 && x < WIDTH) && (y > 0 && y < HEIGHT))
 	{
@@ -85,10 +97,10 @@ void put_pixel_img(t_environment *emu, int x, int y, int color)
 	}
 }
 
-void img_clear(t_environment *emu)
+void	img_clear(t_environment *emu)
 {
-	char *px;
-	int point;
+	char	*px;
+	int		point;
 
 	px = mlx_get_data_addr(emu->image, &point, &point, &point);
 	ft_bzero(px, 4 * WIDTH * HEIGHT);
