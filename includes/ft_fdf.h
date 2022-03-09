@@ -6,7 +6,7 @@
 /*   By: rantario <rantario@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 14:31:50 by rantario          #+#    #+#             */
-/*   Updated: 2022/03/09 14:34:15 by rantario         ###   ########.fr       */
+/*   Updated: 2022/03/09 20:23:35 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,57 @@
 # include <fcntl.h>
 # include <mlx.h>
 # include <libft.h>
+
+# if defined(__APPLE__)
+#  define KEY_W 13
+#  define KEY_D 2
+#  define KEY_A 0
+#  define KEY_S 1
+#  define KEY_PLUS 24
+#  define KEY_MINUS 78
+#  define KEY_ESC 53
+#  define KEY_1 18
+#  define KEY_2 12
+#  define KEY_3 20
+#  define KEY_LEFT 123
+#  define KEY_RIGHT 124
+#  define KEY_UP 126
+#  define KEY_DOWN 125
+#  define KEY_R 15
+#  define KEY_G 5
+#  define KEY_B 11
+#  define KEY_I 34
+#  define KEY_0 29
+#  define KEY_E 14
+#  define KEY_Q 12
+#  define KEY_BR_L 33
+#  define KEY_BR_R 30
+
+# elif __linux__
+#  define KEY_W 119
+#  define KEY_D 100
+#  define KEY_A 97
+#  define KEY_S 115
+#  define KEY_PLUS 61
+#  define KEY_MINUS 45
+#  define KEY_ESC 65307
+#  define KEY_1 49
+#  define KEY_2 50
+#  define KEY_3 51
+#  define KEY_LEFT 65361
+#  define KEY_RIGHT 65363
+#  define KEY_UP 65362
+#  define KEY_DOWN 65364
+#  define KEY_R 114
+#  define KEY_G 103
+#  define KEY_B 98
+#  define KEY_I 105
+#  define KEY_0 48
+#  define KEY_E 101
+#  define KEY_Q 113
+#  define KEY_BR_L 91
+#  define KEY_BR_R 93
+# endif
 
 typedef struct s_point
 {
