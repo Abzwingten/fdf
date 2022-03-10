@@ -6,7 +6,7 @@
 /*   By: rantario <rantario@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 20:35:14 by rantario          #+#    #+#             */
-/*   Updated: 2022/03/09 20:35:34 by rantario         ###   ########.fr       */
+/*   Updated: 2022/03/10 13:37:24 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_draw_controls(t_environment *emu)
 	mlx_string_put(emu->mlx, emu->window, 10, HEIGHT - 60, 0x00FFFF00, \
 					"-/+ to scale image");
 	mlx_string_put(emu->mlx, emu->window, 10, HEIGHT - 50, 0x00FFFF00, \
-					"R/G/B - to change colors");
+					"R/G/B/I - to change colors");
 	mlx_string_put(emu->mlx, emu->window, 10, HEIGHT - 40, 0x00FFFF00, \
 					"Q/E - for x axis rotation");
 	mlx_string_put(emu->mlx, emu->window, 10, HEIGHT - 30, 0x00FFFF00, \
@@ -28,4 +28,13 @@ void	ft_draw_controls(t_environment *emu)
 					"arrow left/arrow right - for y axis rotation");
 	mlx_string_put(emu->mlx, emu->window, 10, HEIGHT - 10, 0x00FFFF00, \
 					"ESC - for exit");
+}
+
+void	img_clear(t_environment *emu)
+{
+	char	*px;
+	int		point;
+
+	px = mlx_get_data_addr(emu->image, &point, &point, &point);
+	ft_bzero(px, 4 * WIDTH * HEIGHT);
 }

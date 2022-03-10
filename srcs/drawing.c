@@ -6,7 +6,7 @@
 /*   By: rantario <rantario@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 14:35:57 by rantario          #+#    #+#             */
-/*   Updated: 2022/03/09 16:24:24 by rantario         ###   ########.fr       */
+/*   Updated: 2022/03/10 10:45:20 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ void	draw_line(t_environment *emu)
 	else
 		emu->line.sign_y = -1;
 	emu->line.error1 = emu->line.dx - emu->line.dy;
+	draw_loop(emu);
+}
+
+void	draw_loop(t_environment *emu)
+{
 	while (emu->point_1.x != emu->point2.x || emu->point_1.y != emu->point2.y)
 	{
 		put_pixel_img(emu, emu->point_1.x, emu->point_1.y, emu->line.color);
@@ -95,13 +100,4 @@ void	put_pixel_img(t_environment *emu, int x, int y, int color)
 		px[point + 1] = get_green(color);
 		px[point + 2] = get_blue(color);
 	}
-}
-
-void	img_clear(t_environment *emu)
-{
-	char	*px;
-	int		point;
-
-	px = mlx_get_data_addr(emu->image, &point, &point, &point);
-	ft_bzero(px, 4 * WIDTH * HEIGHT);
 }

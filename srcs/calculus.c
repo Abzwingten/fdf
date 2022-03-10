@@ -6,7 +6,7 @@
 /*   By: rantario <rantario@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 20:31:43 by rantario          #+#    #+#             */
-/*   Updated: 2022/03/09 20:32:57 by rantario         ###   ########.fr       */
+/*   Updated: 2022/03/10 13:35:51 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	round_number(float number)
 	return ((int)((dec + 1) * flag));
 }
 
-void calculate_x_rot(float *y, float *z, float angle)
+void	calculate_x_rot(float *y, float *z, float angle)
 {
 	float	y_init;
 	float	z_init;
@@ -42,7 +42,7 @@ void calculate_x_rot(float *y, float *z, float angle)
 	(*z) = (-y_init) * sinf(angle) + z_init * cosf(angle);
 }
 
-void calculate_y_rot(float *x, float *z, float angle)
+void	calculate_y_rot(float *x, float *z, float angle)
 {
 	float	x_init;
 	float	z_init;
@@ -53,7 +53,7 @@ void calculate_y_rot(float *x, float *z, float angle)
 	(*z) = (-x_init) * sinf(angle) + z_init * cosf(angle);
 }
 
-void calculate_z_rot(float *x, float *y, float angle)
+void	calculate_z_rot(float *x, float *y, float angle)
 {
 	float	y_init;
 	float	x_init;
